@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong Game</title>
+  </head>
+  <body>
+    <div id="app">
+      <!-- Main Menu -->
+      <div id="main-menu">
+        <h1>PONG</h1>
+        <div id="menu-options">
+          <button id="pvp-btn" class="menu-btn">Player vs Player</button>
+          <button id="pva-btn" class="menu-btn">Player vs AI</button>
+        </div>
+        <div id="ai-difficulty" style="display: none;">
+          <h3>Select AI Difficulty:</h3>
+          <div id="difficulty-options">
+            <button class="difficulty-btn" data-difficulty="easy">Easy</button>
+            <button class="difficulty-btn" data-difficulty="medium">Medium</button>
+            <button class="difficulty-btn" data-difficulty="hard">Hard</button>
+            <button class="difficulty-btn" data-difficulty="impossible">Impossible</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Container -->
+      <div id="game-container" style="display: none;">
+        <div id="ui">
+          <div id="score">
+            <span id="player1-score">0</span>
+            <span id="separator">-</span>
+            <span id="player2-score">0</span>
+          </div>
+          <div id="controls">
+            <div id="player1-controls">Player 1: W/S</div>
+            <div id="player2-controls">Player 2: I/K</div>
+            <div>Press SPACE to pause • Press R to restart • Press ESC for menu</div>
+          </div>
+          <div id="game-status"></div>
+        </div>
+        <canvas id="game-canvas"></canvas>
+      </div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
